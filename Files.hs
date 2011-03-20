@@ -34,7 +34,7 @@ filesExist = do
 		t <- forM f doesFileExist
 		return $ all id t
 
-batterydir = "/sys/class/power_supply/BAT1"
-full = batterydir </> "charge_full"
-charge = batterydir </> "charge_now"
+batterydir = "/sys/class/power_supply/BAT0"
+full = batterydir </> "energy_full"
+charge = batterydir </> "energy_now"
 status = batterydir </> "status"
